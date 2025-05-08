@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* min-height: 100vh;
+    background: #36474f; */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    min-height: 66px;
+    background: black;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header .text {
+    /* margin-right: 500px; */
+    position: fixed;
+    left: 200px;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+header .logo {
+    color: white;
+    border-radius: 15px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header ul li {
+    background-color: black;
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li a:hover {
+    background: gray;
+    border-radius: 12px;
+}
+
+header ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: black;
+    display: none;
+}
+
+header ul li:hover > ul {
+    display: block;
+}
+
+header ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid white;
+}
+
+#nav_button {
+    display: none;
+}
+
+.spasi {
+    height: 75px;
+}
+
+.tempat_foto {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 300px 300px;
+    width: 1300px;
+    grid-gap: 5px;
+    margin: 0 auto 30px;
+}
+
+.tempat_foto .foto {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.tempat_foto .foto:nth-child(1) {
+    grid-row: 1 / 3;
+}
+
+.tempat_foto .foto:nth-child(4) {
+    grid-row: 1 / 4;
+    grid-column: 3 / 4;
+}
+
+.tempat_foto .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tempat_foto .foto .bening {
+    width: 100%;
+    height: 120px;
+    background: black;
+    position: absolute;
+    opacity: 50%;
+    bottom: 0;
+}
+
+.tempat_foto .foto .deskripsi .kotak {
+    width: min-content;
+    background: #1e90ff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tempat_foto .foto .deskripsi {
+    position: absolute;
+    bottom: 0;
+    padding: 10px
+}
+
+.tempat_foto .foto .deskripsi p {
+    color: white;
+    font-size: 20px;
+    font-family: 'comic sans ms';
+    margin: 10px 0;
+}
+
+.tempat_foto .foto .deskripsi p > span {
+    border-left: 2px solid #1e90ff;
+    margin: 0 5px;
+}
+
+.tempat_foto .foto .deskripsi h2 {
+    font-size: 28px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.fitur {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    width: 1200px;
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+.fitur .about {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+}
+
+.fitur .about h1 {
+    font-family: 'comic sans ms';
+    margin-bottom: 15px;
+}
+
+.fitur .about h1 > span {
+    color: #1e90ff;
+}
+
+.fitur .about h2 {
+    text-align: center;
+    font-family: courier;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.fitur .about p {
+    font-family: 'comic sans ms';
+    text-align: center;
+    margin: 15px 0;
+}
+
+.fitur .about p span {
+    border-left: 2px solid #1e90ff;
+    margin: 0 5px;
+}
+
+.fitur .about p + p {
+    margin: 10px 0;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-family: inherit;
+    margin-bottom: 25px;
+}
+
+.fitur .about h2 > span {
+    color: #1e90ff;
+}
+
+.fitur .about img {
+    width: 100%;
+}
+
+.fitur .sidebar {
+    grid-row: 1 / 4;
+}
+
+.fitur .sidebar h1 {
+    font-family: 'comic sans ms';
+    margin-bottom: 15px;
+}
+
+.fitur .sidebar h1 > span {
+    color: #1e90ff;
+    font-weight: 800;
+}
+
+.fitur .sidebar p {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.fitur .sidebar ul li {
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.fitur .sidebar form label {
+    display: block;
+    font-family: courier;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fitur .sidebar form input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.fitur .sidebar form textarea {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.fitur .sidebar form button {
+    padding: 10px;
+    background-color: #1e90ff;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.fitur .about img {
+    border-radius: 12px;
+}
+
+.tempat_kartu {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px ;
+    margin: 100px auto;
+    width: 1200px;
+    gap: 10px;
+}
+
+.tempat_kartu .kartu {
+    /* border: 2px solid #002a6a; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tempat_kartu .kartu img {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: smk 3s reverse infinite;
+    border-radius: 5%;
+}
+
+@keyframes smk {
+    50% {
+        margin-top: 15px;
+    }
+}
+
+.tempat_kartu .kartu .deskripsi {
+    border: 2px solid gray;
+    margin-top: 150px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.tempat_kartu .kartu .deskripsi h2 {
+    margin-top: 130px;
+    text-align: center;
+    font-family: 'comic sans ms';
+    margin-bottom: 15px;
+    animation: jurusan 3s reverse infinite;
+}
+
+.tempat_kartu .kartu .deskripsi p {
+    background: #1e90ff;
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@keyframes jurusan {
+    50% {
+        letter-spacing: 3px;
+        text-shadow: 0 2px 5px #1e90ff;
+    }
+}
+
+.tempat_kartu .kartu .deskripsi a {
+    display: inline-block;
+    background: #1e90ff;
+    padding: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.tempat_kartu .kartu .deskripsi a:hover {
+    letter-spacing: 2px;
+    border: 2px solid gray;
+    background: white;
+    color: gray;
+}
+
+#program h1 {
+    text-align: center;
+    margin: 50px 0;
+    font-family: 'comic sans ms';
+}
+
+#program h1 span {
+    color: #1e90ff;
+}
+
+.footer {
+    text-align: center;
+    line-height: 30px;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+#pageUpButton {
+    color: white;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    padding: 10px;
+    background: gray;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header .text {
+        /* margin-right: 500px; */
+        position: fixed;
+        left: 80px;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 20px;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background: #1e90ff;
+        display: none;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(-12px);
+        box-shadow: 0 12px white;
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(12px);
+    }
+
+    #nav_button:checked ~ nav {
+        display: initial;
+    }
+
+    #nav_button:checked ~ .menuToggle::before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 white;
+    }
+
+    #nav_button:checked ~ .menuToggle::after {
+        transform: rotate(315deg);
+    }
+
+    .tempat_foto {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 300px 300px;
+        width: 95%;
+        grid-gap: 5px;
+        margin: 0 auto 30px;
+    }
+
+    .tempat_foto .foto:nth-child(1) {
+        grid-row: 1 / 2;
+    }
+    
+    .tempat_foto .foto:nth-child(4) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 2;
+    }
+
+    .fitur {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .fitur .sidebar form button {
+        margin-bottom: 30px;
+    }
+
+    .fitur .sidebar ul li {
+        margin-left: 20px;
+    }
+    
+    .tempat_kartu {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 0 auto;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+
+    header .text {
+        /* margin-right: 250px; */
+        position: fixed;
+        left: 80px;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 20px;
+    }
+
+    .tempat_foto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tempat_foto .foto {
+        width: 100%;
+    }
+
+    .fitur {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .fitur .sidebar ul li {
+        margin-left: 20px;
+    }
+
+    .fitur .sidebar form button {
+        margin-bottom: 30px;
+    }
+
+    .tempat_foto .about {
+        width: 100%;
+    }
+
+    .tempat_kartu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tempat_kartu .kartu {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
